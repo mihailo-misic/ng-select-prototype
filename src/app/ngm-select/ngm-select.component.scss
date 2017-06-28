@@ -1,0 +1,55 @@
+$padding: 5px;
+$width: 200px;
+$total-width: $width + $padding*2 +2;
+$background-color: #bbdefb;
+
+.ngm-container {
+    width: $total-width;
+    float: left;
+}
+
+.ngm-select {
+    position: relative;
+    cursor: pointer;
+    width: $width;
+    height: 20px;
+    padding: $padding;
+    border: solid darkgrey 1px;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &.open {
+        border-radius: 3px 3px 0 0;
+        &::after {
+            transform: rotate(180deg)
+        }
+    }
+
+    &::after {
+        transition: all 300ms;
+        content: '';
+        position: absolute;
+        top: calc(50% - 2px);
+        right: 5px;
+        width: 0;
+        height: 0;
+        border-top: solid 5px darkgray;
+        border-left: solid 5px transparent;
+        border-right: solid 5px transparent;
+    }
+}
+
+.ngm-option-holder {
+    width: $total-width;
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+    background-color: lightcyan;
+    border-radius: 0 0 3px 3px;
+
+    display: none;
+    &.open {
+        display: block;
+    }
+}

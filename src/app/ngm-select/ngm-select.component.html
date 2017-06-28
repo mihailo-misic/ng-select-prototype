@@ -1,0 +1,12 @@
+<div class="ngm-container">
+    <div class="ngm-select" (click)="toggle()" [ngClass]="{'open':opened}">
+        <b>{{ parseSelected() }}</b>
+    </div>
+    <div class="ngm-option-holder" [ngClass]="{'open':opened}" (scroll)="calcPosition($event)">
+        <app-ngm-option *ngFor="let option of smartOptions"
+                        [value]="option.value" [label]="option.label" [disabled]="option.disabled"
+                        [selectedArray]="selected"
+                        (onSelect)="optionSelected($event)">
+        </app-ngm-option>
+    </div>
+</div>

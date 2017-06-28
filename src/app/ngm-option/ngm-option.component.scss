@@ -1,0 +1,32 @@
+$background-color: #bbdefb;
+
+.ngm-option {
+    background-color: $background-color;
+    text-align: left;
+    padding: 5px 15px;
+    border-bottom: solid white 1px;
+    transition: all 400ms;
+    cursor: pointer;
+
+    &:first-child {
+        padding-top: 10px;
+    }
+    &:last-child {
+        padding-bottom: 10px;
+    }
+
+    &:hover {
+        background-color: lighten($background-color, 5%);
+    }
+    &.selected {
+        background-color: lighten($background-color, 10%);
+        &:hover{
+            background-color: lighten($background-color, 7%);
+        }
+    }
+
+    &.disabled{
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+}
