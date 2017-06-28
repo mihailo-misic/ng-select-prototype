@@ -1,5 +1,15 @@
 # NgmSelect
 
+## Left TODO:
+
+1. Implement filter;
+2. Implement multi select;
+3. Implement ngForm integration;
+4. Improve styles.
+
+___
+___
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
 
 ## Development server
